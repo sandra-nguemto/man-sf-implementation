@@ -132,32 +132,3 @@ class GAT(nn.Module):
 
 
 
-#?##################  Concatenation Processor  ###################    
-
-# class ConcatProcessor(nn.Module):
-#     def __init__(self, text_input_shape,  price_input_shape, num_stocks, hidden_size):
-#         super(ConcatProcessor, self).__init__()
-#         self.SMEncoder = SMEncoder(text_input_shape, hidden_size)  #~##
-#         self.PriceEncoder = PriceEncoder(price_input_shape, hidden_size) #~##
-#         self.bilinear = BilinearLayer(hidden_size, hidden_size) #~##
-#         self.num_stocks = num_stocks
-#         self.hidden_size = hidden_size
-
-  
-        
-#     def forward(self, s, p):
-
-        
-#         # tensor to hold bimodal representation of all stocks
-#         X = torch.zeros(s.size(0), self.hidden_size, self.num_stocks)
-
-#         for i in range(self.num_stocks):
-#             # Social Media Information Encoder
-#             ct = self.SMEncoder(s[:, :, :, :, i])
-#             # Price Data Encoder
-#             qt = self.PriceEncoder(p[:, :, :, i]) 
-#             # Bilinear Layer
-#             bilinear = self.bilinear(ct, qt)
-#             X[:, :, i] = bilinear
-        
-#         return X    
