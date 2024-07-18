@@ -3,6 +3,8 @@ import torch
 import os
 import pickle
 
+
+
 valid_comps = {
     'Apple': 'wd:Q312',
     'Amazon': 'wd:Q3884',
@@ -48,6 +50,7 @@ class WikiGraph():
         
 
     ###################  Querying Wikidata ###################      
+    ## Querying [wikidata.org](https://www.wikidata.org/)
 
     def get_query(self):
     
