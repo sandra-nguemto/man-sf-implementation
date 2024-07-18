@@ -6,7 +6,7 @@ import mkwikidata
 
 
 from layers import AttnLayer, GRULayer, BilinearLayer, GraphAttentionLayer, MultiHeadAttention
-from wikirelations import WikiGraph
+
 
 #~################## Social Media Information Encoder  ###################  
 
