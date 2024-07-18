@@ -14,5 +14,5 @@ This code uses the [stokcnet dataset](https://github.com/yumoxu/stocknet-dataset
 
 ## Run
 - Data preprocessing: `python data_preprocess.py` `python wikirelations.py`
-- Then, build input data for model, `python build_intput_data.py`
-- Finally, you can run it by `python train.py`
+- Build input data for model: `python build_intput_data.py`
+- Train the model: `python train.py`
