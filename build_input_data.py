@@ -1,7 +1,7 @@
 import numpy as np
 import os
 import random
-from utils import encode_onehot
+
 
 
 # make needed directory
@@ -49,12 +49,9 @@ def build_train_data(company_list,data_num,train_rate=0.7):
 			price_list.append(price)
 			tweet_list.append(tweet)
 			label_list.append(label)
-		# price_list = np.array(price_list)
-		# tweet_list = np.array(tweet_list)
 		label_list = np.array(label_list)
 		price_list = np.expand_dims(np.transpose(np.array(price_list), (1,2,0)), 0)
 		tweet_list = np.expand_dims(np.transpose(np.array(tweet_list), (1,2,3,0)), 0)
-		# label_list = np.transpose(np.array(label_list), (1,2,0))
 		np.save("./Data/train_price/"+str(i).zfill(10)+".npy",price_list)
 		np.save("./Data/train_text/"+str(i).zfill(10)+".npy",tweet_list)
 		np.save("./Data/train_label/"+str(i).zfill(10)+".npy",label_list)

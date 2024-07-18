@@ -5,15 +5,6 @@ import json
 import pickle
 
 
-def encode_onehot(labels):
-    classes = set(labels)
-    classes_dict = {c: np.identity(len(classes))[i, :] for i, c in
-                    enumerate(classes)}
-    labels_onehot = np.array(list(map(classes_dict.get, labels)),
-                             dtype=np.int32)
-    return labels_onehot
-
-
 def load_data():
     print('Loading dataset...') 
     wikirelations_file = './Data/raw_data/wiki_relations/comps_wikirelations.pkl'

@@ -150,7 +150,7 @@ def get_price_data(dir_path):
 
 
 database = get_price_data("./")
-assert(len(database) == 30) # need to delete some company in original price data
+assert(len(database) == 30) 
 
 def build_date_dict(n):
     data_dict = {}
